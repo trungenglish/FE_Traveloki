@@ -287,7 +287,7 @@ const BookingCar = () => {
                 <tr className="bg-green-400">
                   <th className="border px-4 py-2">Công ty</th>
                   <th className="border px-4 py-2">Số ghế tối đa</th>
-                  <th className="border px-4 py-2">Số tiền/km</th>
+                  <th className="border px-4 py-2">Số tiền/km</th>  
                   <th className="border px-4 py-2">Mã Sân Bay</th>
                 </tr>
               </thead>
