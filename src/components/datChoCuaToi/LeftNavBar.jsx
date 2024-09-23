@@ -1,20 +1,19 @@
-import React, { useContext } from "react";
+
 import Avatar from "../../assets/NiceService.png";
 import listIcon from "../../assets/user-booking-ic.svg";
 import OnButtonIcon from "../../assets/On_button.svg";
 import HistoryBookingIcon from "../../assets/history-booking-ic.svg";
-import { UserContext } from "../../Router/UserContext";
+// import { UserContext } from "../../Router/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function LeftNavBar() {
-  const { user, logout } = useContext(UserContext);
+  // const { user, logout } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleLogout = async (event) => {
     event.preventDefault();
-    localStorage.removeItem('token');
     logout();
-    navigate("/login");        
+    navigate("/login");
   };
 
   return (
@@ -32,7 +31,7 @@ function LeftNavBar() {
               </div>
               <div className="w-[60%] text-2xl font-bold">
                 <h1>
-                  {user ? `${user.firstName} ${user.lastName}` : "Nguyễn Quân"}
+                  {/*{user ? `${user.firstName} ${user.lastName}` : "Nguyễn Quân"}*/}
                 </h1>
               </div>
             </div>
