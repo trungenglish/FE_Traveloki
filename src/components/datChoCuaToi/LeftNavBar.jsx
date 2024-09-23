@@ -10,10 +10,11 @@ function LeftNavBar() {
   const { user, logout } = useContext(UserContext);
   const navigate = useNavigate();
 
-  const handleLogout = (event) => {
+  const handleLogout = async (event) => {
     event.preventDefault();
+    localStorage.removeItem('token');
     logout();
-    navigate("/login");
+    navigate("/login");        
   };
 
   return (

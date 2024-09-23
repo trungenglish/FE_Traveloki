@@ -27,8 +27,8 @@ const Login = () => {
           password,
         }
       );
-
       if (response.status === 200) {
+        localStorage.setItem('token', response.data.token);
         const { token, user } = response.data;
         login(user, token);
         setSuccess("Đăng nhập thành công!");
@@ -40,7 +40,6 @@ const Login = () => {
       setError("Có lỗi xảy ra trong quá trình đăng nhập. Vui lòng thử lại.");
     }
   };
-
   return (
     <div
       className="flex items-center justify-center py-9 min-h-screen bg-center bg-cover"
