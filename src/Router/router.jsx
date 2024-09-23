@@ -16,9 +16,6 @@ import { RatingBus } from "../components/rating/RatingBus.jsx";
 import { RatingTau } from "../components/rating/RatingTau.jsx";
 import { ErrorPage } from "../pages/SystemPage/ErrorPage.jsx";
 import HomePage from "../pages/HomePage/HomePage.jsx";
-import Login from "../pages/Auth/LogIn.jsx";
-
-// import { TextEditorReact } from "../Customer/Rating/TextEditorReact.jsx"; 
 
 const router = createBrowserRouter([
   {
@@ -27,15 +24,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
-        element: <Login/>,
-      },
-      {
         path: "SignUp",
         element: <SignUp />,
       },
       {
-        path: "HomePage",
+        index: true,
         element: <HomePage />,
       },
       {
